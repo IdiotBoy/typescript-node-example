@@ -2,6 +2,7 @@ import 'reflect-metadata'
 import path from 'path'
 import { createKoaServer } from 'routing-controllers'
 import { Sequelize } from 'sequelize-typescript'
+// import { Sequelize } from 'sequelize'
 import serve from 'koa-static'
 import bodyParser from 'koa-bodyparser'
 import { MysqlConfig } from 'config'
@@ -32,7 +33,7 @@ const _ = new Sequelize({
     acquire: 30000,
     idle: 10000,
   },
-  operatorsAliases: false,
+  // operatorsAliases: false,
   // true会在控制台打印每次sequelize操作时对应的SQL命令
   logging: true,
 })
